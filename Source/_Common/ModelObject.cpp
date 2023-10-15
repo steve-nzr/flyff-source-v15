@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <d3d9.h>
 #include <d3dx9.h>
-#include <dxerr9.h>
+#include <DxErr.h>
 #include <stdio.h>
 #include "xUtil3d.h"
 #include "defineObj.h"

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 #include <stdio.h>
-#include <dxerr9.h>
+#include <DxErr.h>
 #include "Object3D.h"
 #include "Material.h"
 //#include "..\_DirectX\dxutil.h"
@@ -724,7 +724,7 @@ HRESULT	CObject3D :: CreateDeviceBuffer( GMOBJECT *pObject, LPDIRECT3DVERTEXBUFF
 			if( FAILED(hr) )
 			{
 				LPCTSTR szError = Error( "1 %s Object3D 버텍스 버퍼 생성 실패(%s) : m_nMaxVB=%d, nVertexSize=%d, dwFVF=%d, dwUsage=%d, pool=%d %08x", 
-																		  m_szFileName, DXGetErrorString9(hr), pObject->m_nMaxVB, 
+																		  m_szFileName, DXGetErrorString(hr), pObject->m_nMaxVB, 
 																		  nVertexSize, dwFVF, dwUsage, (int)pool, (int)m_pd3dDevice );
 				ADDERRORMSG( szError );
 				// Object3D관리자를 통해 메쉬를 로딩한 후 그 포인터를 받아온다.
@@ -759,7 +759,7 @@ HRESULT	CObject3D :: CreateDeviceBuffer( GMOBJECT *pObject, LPDIRECT3DVERTEXBUFF
 			if( FAILED(hr) )
 			{
 				LPCTSTR szError = Error( "2 %s Object3D 버텍스 버퍼 생성 실패(%s) : m_nMaxVB=%d, nVertexSize=%d, dwFVF=%d, dwUsage=%d, pool=%d %08x", 
-																		  m_szFileName, DXGetErrorString9(hr), pObject->m_nMaxVB, 
+																		  m_szFileName, DXGetErrorString(hr), pObject->m_nMaxVB, 
 																		  nVertexSize, dwFVF, dwUsage, (int)pool, (int)m_pd3dDevice );
 				ADDERRORMSG( szError );
 				if( FAILED( hr = m_pd3dDevice->TestCooperativeLevel() ) )		// 디바이스가 허접하면 에러남김.
@@ -786,7 +786,7 @@ HRESULT	CObject3D :: CreateDeviceBuffer( GMOBJECT *pObject, LPDIRECT3DVERTEXBUFF
 		if( FAILED(hr) )
 		{
 			Error( "%s Object3D 인덱스 버퍼 생성 실패(%s) : m_nMaxIB=%d", 
-													m_szFileName, DXGetErrorString9(hr), pObject->m_nMaxIB );
+													m_szFileName, DXGetErrorString(hr), pObject->m_nMaxIB );
 			int *p = NULL;
 			*p = 1;
 			return E_FAIL;

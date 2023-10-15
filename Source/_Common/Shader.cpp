@@ -83,6 +83,6 @@ HRESULT CShader::End( void )
 
 HRESULT CShader::Pass( UINT nPass )
 {
-	return m_pEffect->Pass( nPass );
+	return m_pEffect->BeginPass( nPass );
 }
 

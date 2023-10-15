@@ -59,7 +59,7 @@ using namespace std;
 
 // DirectX or 3D Core
 #include <D3D9.h>
-#include <dxerr9.h>
+#include <DxErr.h>
 #include <dsound.h>
 #include <dshow.h>
 

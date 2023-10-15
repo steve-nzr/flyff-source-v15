@@ -5,7 +5,7 @@
 #define __CLOTH_H
 
 #include <d3dx9.h>
-#include <dxerr9.h>
+#include <DxErr.h>
 #include "DXUtil.h"
 
 #ifdef __YCLOTH

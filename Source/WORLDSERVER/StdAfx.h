@@ -42,7 +42,7 @@ using namespace std;
 #include <afxdisp.h>        // MFC Automation classes
 
 #include <d3d9.h>
-#include <dxerr9.h>
+#include <DxErr.h>
 #include <dshow.h>
 #include <strmif.h>
 #include <control.h>

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include <dxerr9.h>
+#include <DxErr.h>
 #include "defineObj.h"
 #include "path.h"
 #include "ModelGlobal.h"
@@ -207,7 +207,7 @@ BOOL CreateShadowMap( LPDIRECT3DDEVICE9 pd3dDevice, D3DFORMAT backBufferFormat )
 	}
 	if( FAILED( hr ) )
 	{
-		LPCTSTR szErr = Error( "½¦µµ¿ì ¸Ê »ý¼º ¿¡·¯ %s, %d, %d", DXGetErrorString9(hr), g_Option.m_nShadow, g_Option.m_nTextureQuality );
+		LPCTSTR szErr = Error( "½¦µµ¿ì ¸Ê »ý¼º ¿¡·¯ %s, %d, %d", DXGetErrorString(hr), g_Option.m_nShadow, g_Option.m_nTextureQuality );
 		ADDERRORMSG( szErr );
 		DeleteShadowMap( pd3dDevice );
 		return FALSE;
@@ -1249,7 +1249,7 @@ HRESULT CTextureSurface::Create( LPDIRECT3DDEVICE9 pd3dDevice, D3DFORMAT backBuf
 	}
 	if( FAILED( hr ) )
 	{
-		LPCTSTR szErr = Error( "Create TextureSurface Error %s", DXGetErrorString9(hr) );
+		LPCTSTR szErr = Error( "Create TextureSurface Error %s", DXGetErrorString(hr) );
 		ADDERRORMSG( szErr );
 		Destroy();
 		return E_FAIL;
@@ -1330,7 +1330,7 @@ void CTextureSurface::BeginScene( void )
 {
 	HRESULT hr = m_pRenderToSurface->BeginScene( m_pSurface, NULL );
 	if( FAILED(hr) )
-		Error( "CTextureSurface:BeginScene : %s", DXGetErrorString9(hr) );
+		Error( "CTextureSurface:BeginScene : %s", DXGetErrorString(hr) );
 }
 
 void CTextureSurface::EndScene( void )

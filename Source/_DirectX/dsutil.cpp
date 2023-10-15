@@ -14,7 +14,7 @@
 
 #include <windows.h>
 #include <mmsystem.h>
-#include <dxerr9.h>
+#include <DxErr.h>
 #include <dsound.h> 
 #include "DSUtil.h"
 #include "DXUtil.h"

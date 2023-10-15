@@ -237,7 +237,7 @@ HRESULT LoadTextureFromRes(
 			   pSrcData, nSrcDataSize, Width, Height, MipLevels, Usage, Format, Pool, Filter, MipFilter, ColorKey, pSrcInfo, pPalette, ppTexture );
 		if( FAILED( hr ) )
 		{
-			LPCTSTR szErr = Error( "D3DXCreateTextureFromFileInMemoryEx %s %s", pFileName, DXGetErrorString9( hr ) );
+			LPCTSTR szErr = Error( "D3DXCreateTextureFromFileInMemoryEx %s %s", pFileName, DXGetErrorString( hr ) );
 			ADDERRORMSG( szErr );
 		}
 	}

@@ -94,7 +94,7 @@ HRESULT DXUtil_ConvertStringToGUID( const TCHAR* strIn, GUID* pGuidOut );
 
 //-----------------------------------------------------------------------------
 // Debug printing support
-// See dxerr9.h for more debug printing support
+// See DxErr.h for more debug printing support
 //-----------------------------------------------------------------------------
 VOID    DXUtil_Trace( TCHAR* strMsg, ... );
 
